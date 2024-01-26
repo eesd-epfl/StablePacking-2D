@@ -1,0 +1,25 @@
+excuting time: 14/07/2023 00:17:35
+/home/qiwang/Projects/15_Stonepacker2D/Tests/Almeida_wall/galary_by_constrution_method/variant_two_bothsides_cutting_R/result
+number_proc:10,total time (min): 2.8792910118897757
+/home/qiwang/Projects/15_Stonepacker2D/Tests/Almeida_wall/galary_by_constrution_method/variant_one_bothsides_cutting_IR/result
+number_proc:10,total time (min): 29.22439823110898
+/home/qiwang/Projects/15_Stonepacker2D/Tests/Almeida_wall/galary_by_constrution_method/full_bothsides_cutting_R/result
+number_proc:10,total time (min): 5.97615929722786
+/home/qiwang/Projects/15_Stonepacker2D/Tests/Almeida_wall/galary_by_constrution_method/full_bothsides_cutting_IR/result
+number_proc:10,total time (min): 60.44144818504651
+/home/qiwang/Projects/15_Stonepacker2D/Tests/Almeida_wall/galary_by_constrution_method/variant_two_bothsides_cutting_PR/result
+number_proc:10,total time (min): 3.171080068349838
+/home/qiwang/Projects/15_Stonepacker2D/Tests/Almeida_wall/galary_by_constrution_method/variant_two_bothsides_cutting_IR/result
+number_proc:10,total time (min): 37.9304428076744
+/home/qiwang/Projects/15_Stonepacker2D/Tests/Almeida_wall/galary_by_constrution_method/variant_one_bothsides_cutting_R/result
+number_proc:10,total time (min): 2.11864811817805
+/home/qiwang/Projects/15_Stonepacker2D/Tests/Almeida_wall/galary_by_constrution_method/sample_twice_bothsides_cutting_IR/result
+number_proc:10,total time (min): 46.278800822496414
+/home/qiwang/Projects/15_Stonepacker2D/Tests/Almeida_wall/galary_by_constrution_method/full_bothsides_cutting_PR/result
+number_proc:10,total time (min): 5.3475076417128244
+/home/qiwang/Projects/15_Stonepacker2D/Tests/Almeida_wall/galary_by_constrution_method/variant_one_bothsides_cutting_PR/result
+number_proc:10,total time (min): 1.7692839554945627
+/home/qiwang/Projects/15_Stonepacker2D/Tests/Almeida_wall/galary_by_constrution_method/sample_twice_bothsides_cutting_PR/result
+number_proc:10,total time (min): 3.7972260240713758
+/home/qiwang/Projects/15_Stonepacker2D/Tests/Almeida_wall/galary_by_constrution_method/sample_twice_bothsides_cutting_R/result
+number_proc:10,total time (min): 5.008173406918844

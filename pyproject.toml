@@ -1,0 +1,119 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm","wheel","gitchangelog"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stablepacking2d"
+version = "0.0.1"
+authors = [{name = "EESD-QianqingWANG"}]
+
+description =  "A stacking algorithm that pack irregular stones to construct stable masonry walls"
+readme = "readme.md"
+keywords = ["python"]
+classifiers = [
+	"Development Status :: 1 - Planning",
+	"Intended Audience :: Developers",
+	"Programming Language :: Python :: 3",
+	"Operating System :: Unix",
+	"Operating System :: MacOS :: MacOS X",
+	"Operating System :: Microsoft :: Windows",
+]
+
+# Environment settings
+requires-python = ">=3.8"
+dependencies = [
+	"scikit-image",
+	"opencv-python",
+	"matplotlib",
+	"mosek",
+    "geometry3d",
+    "pickle5",
+    "pandas",
+    "networkx",
+    "pyMetaheuristic",
+    "numpy==1.21.6",
+    "scikit-learn"
+]
+
+
+[project.optional-dependencies]
+dev = [
+	"pre-commit==3.3.1",
+	"pytest",
+	"pytest-cov",
+	"pytest-mock",
+	"black==22.8.0",
+	"ruff==0.0.257",
+	"mypy",
+	"sphinx",
+	"sphinx_rtd_theme",
+	"nbsphinx",
+	"sphinx-pyproject",
+	"sphinx-mdinclude"
+	]
+
+# Linter settings
+[tool.ruff]
+select = ["F",
+	  "E",
+	  "I",
+	  "Q",
+	  "W",
+	  "UP",
+	  # "SIM",
+	  # "PTH",
+	  # "RET",
+	 ]
+ignore = ["E722"]
+line-length = 120
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
+unfixable = []
+
+# Code formatter
+[tool.black]
+line-length = 120
+preview = true
+
+# Tests
+[tool.coverage.run]
+omit = []
+[tool.pytest.ini_options]
+addopts = "--cov --cov-report html --cov-report term-missing --cov-fail-under 5"
+
+# Type checking
+[tool.mypy]
+# Specify the Python version you are using
+python_version = "3.10"
+# avoid folder
+# Exclude specific files or directories from type checking
+# Example:
+# exclude = ["tests"]
+exclude = ["tests","build","venv"]
+disallow_untyped_defs = false
+warn_unused_ignores = true
+warn_unused_configs = true
+warn_no_return = true
+warn_return_any = false
+warn_unreachable = true
+show_error_codes = true
+pretty = true
+
+[tool.sphinx-pyproject]
+github_username = ""
+github_repository = ""
+author = ""
+project = ""
+copyright = ""
+language = "en"
+package_root = ""
+extensions = [
+	"sphinx.ext.napoleon",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.viewcode",
+    "sphinx.ext.autosectionlabel",
+    "nbsphinx",
+    "sphinx_mdinclude",
+	"sphinx.ext.autosummary",
+]
+html_theme = "sphinx_rtd_theme"

@@ -1,0 +1,1 @@
+iteration;stone id;width;x;y;score;course height;global density;interlocking;local_density;kinematic
