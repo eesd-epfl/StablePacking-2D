@@ -425,12 +425,12 @@ class Stone():
             if np.count_nonzero(img_rotated) / np.count_nonzero(stone_matrix)<0.8:
                 print("Original size", np.count_nonzero(stone_matrix))
                 print("Rotated size", np.count_nonzero(img_rotated))
-                plt.imshow(stone_matrix)
-                plt.title("Original matirx")
-                plt.show()
-                plt.imshow(img_rotated)
-                plt.title("Rotated matirx")
-                plt.show()
+                # plt.imshow(stone_matrix)
+                # plt.title("Original matirx")
+                # plt.show()
+                # plt.imshow(img_rotated)
+                # plt.title("Rotated matirx")
+                # plt.show()
                 return {"stone":None,"center":None,"angle":None,"success":False}
             try_stone = new_stone.transformed([0, 0])
             try_stone.matrix = img_rotated
@@ -470,9 +470,6 @@ class Stone():
         #new_stone.rot_angle+=min_angle
         get_main_logger().info(
             f"Rotated stone {self.id} to axis aligned position")
-        if get_plot_stone_id() == self.id:
-            self.save(
-                f"/home/qiwang/Projects/15_Stonepacker2D/img/stone{self.id}_init.png")
         return {"success":True,"stone":new_stone,"center":(int(self.matrix.shape[1]/2), int(self.matrix.shape[0]/2)),"angle":min_angle}
 
     def rotate_axis_align(self):

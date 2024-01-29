@@ -161,4 +161,4 @@ cython_debug/
 
 # Results
 /Tests/*/result*/
-/Tests/Almeida/
+*.txt

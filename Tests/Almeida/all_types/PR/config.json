@@ -1,0 +1,13 @@
+{
+    "input_wall_name": "wall_labels",
+    "scale":0.5,
+    "wall_width_plus":2,
+    "wall_height_plus":3,
+    "wall_width_times":1,
+    "wall_height_times":1,
+    
+    "vendor_type":"sample_twice",
+    "construction_order":"two_sides",
+    "variant_sample":2,
+    "allow_cutting": false
+}
