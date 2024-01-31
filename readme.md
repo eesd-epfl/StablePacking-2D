@@ -1,4 +1,5 @@
 # Stable packing irregular stones in 2D masonry wall construction
+![fft](./figs/build_process.gif)
 
 # Installation
 

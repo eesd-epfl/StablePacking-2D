@@ -100,3 +100,43 @@ def build_graph(img, erosion=True):
 # nx.draw_networkx_labels(G, pos, labels, font_size=6, font_family='serif',
 #                         font_weight='bold', bbox=dict(fc='lightblue', ec="black", boxstyle="round", lw=1))
 # plt.show()
+def plot_LMT(image, paths, LMTs, _root_dir):
+    plt.clf()
+    image[image==0] = np.nan
+    plt.imshow(image, cmap='gray')
+    for i, path in enumerate(paths):
+        centers_r = []
+        centers_c = []
+        for node in path:
+            centers_r.append(node[0])
+            centers_c.append(node[1])
+        plt.plot(centers_c, centers_r,
+                 '-o', c='r', label=f"LMT: {round(LMTs[i],3)}")
+        leg = plt.legend(fontsize=10, bbox_to_anchor=(
+            0, 0.9), ncol=2, loc="lower left")
+        leg.get_frame().set_linewidth(0.0)
+        leg.get_frame().set_alpha(0.0)
+    plt.axis('off')
+    plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
+    plt.savefig(_root_dir+"/data/"+
+                "LMT.png", dpi=600,transparent = True, bbox_inches='tight')
+    plt.show()
+
+def plot_FAV(image, paths, FAV_100, _root_dir):
+    plt.clf()
+    image[image==0] = np.nan
+    plt.imshow(image, cmap='gray')
+    for i, path in enumerate(paths):
+        centers_r = []
+        centers_c = []
+        for node in path:
+            centers_r.append(node[0])
+            centers_c.append(node[1])
+        plt.plot(centers_c, centers_r,
+                 '-o', c='r',ms = 2)
+    # plt.text(1, -2, f" FAV(%){round(FAV_100,2)}")
+    plt.axis('off')
+    plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
+    plt.savefig(_root_dir+"/data/"+
+                "FAV.png", dpi=600,transparent = True, bbox_inches='tight')
+    plt.show()

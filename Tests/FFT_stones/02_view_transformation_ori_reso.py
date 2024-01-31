@@ -145,6 +145,11 @@ for i in range(5):
         if len(np.argwhere((stone_images[stone_id] != 0)&(base_image!=0)))/len(np.argwhere(stone_images[stone_id] != 0))>=0.5:
             print("overlapping")
             continue
+
+        # save the transformed stones image
+        if os.path.exists(data_dir+'transformed_stones/')==False:
+            os.mkdir(data_dir+'transformed_stones/')
+        cv2.imwrite(data_dir+'transformed_stones/iteration_'+str(seq_i)+'_stone_'+str(stone_id)+'.png',stone_images[stone_id])
         
         base_image = np.where(
             stone_images[stone_id] != 0, stone_images[stone_id], base_image)
