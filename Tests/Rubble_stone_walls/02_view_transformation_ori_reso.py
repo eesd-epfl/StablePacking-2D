@@ -23,7 +23,7 @@ newcolors = np.concatenate([tab20_cm(np.linspace(0, 1, 20))] * 13, axis=0)
 white = np.array([255/256, 255/256, 255/256, 1])
 newcolors[:1, :] = white
 newcmp = ListedColormap(newcolors)
-data_dir_prefix = "./result_20231114-194339_wall"
+data_dir_prefix = "./result_20240131-113837_wall"
 _rescale = 0.5
 wall_width = 608
 wall_height = 608
@@ -137,6 +137,12 @@ for i in range(12):
             print("overlapping")
             overlap_counter += 1
             continue
+
+
+        # save the transformed stones image
+        if os.path.exists(data_dir+'transformed_stones/')==False:
+            os.mkdir(data_dir+'transformed_stones/')
+        cv2.imwrite(data_dir+'transformed_stones/iteration_'+str(seq_i)+'_stone_'+str(stone_id)+'.png',stone_images[stone_id])
         
         base_image = np.where(
             stone_images[stone_id] != 0, stone_images[stone_id], base_image)

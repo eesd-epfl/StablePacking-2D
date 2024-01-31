@@ -1,6 +1,8 @@
 # Stable packing irregular stones in 2D masonry wall construction
 ![fft](./figs/build_process.gif)
 
+![rubble_wall](./figs/rubble_wall.gif)
+
 # Installation
 
 - create virtual environment in the current directory with `python -m venv env` and `source env/bin/activate`.
