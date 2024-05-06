@@ -3,6 +3,10 @@
 
 ![rubble_wall](./figs/rubble_wall.gif)
 
+
+# News
+We have another implementation of the algorithm online! The [new implementation](https://github.com/qianqing-wanggg/StablePacking2D/tree/master) is easy to read with a few lines of code!
+
 # Installation
 
 - create virtual environment in the current directory with `python -m venv env` and `source env/bin/activate`.
